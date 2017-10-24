@@ -32,6 +32,9 @@ describe Alimentos do
         it "Se almacena correctamente la cantidad de proteínas" do
           expect(@platanos.proteinas).to eq('1.2g') 
         end  
+        it "Se almacena correctamente la cantidad de glúcidos" do
+          expect(@manzana.glucidos).to eq('12.4g') 
+        end  
     end
 
 end

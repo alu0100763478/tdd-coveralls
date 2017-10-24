@@ -29,6 +29,9 @@ describe Alimentos do
           expect(@yogurt.nombre).to eq('Yogurt') 
           expect(@leche.nombre).to eq('Leche vaca')
 	end
+        it "Se almacena correctamente la cantidad de proteínas" do
+          expect(@platanos.proteinas).to eq('1.2g') 
+        end  
     end
 
 end

@@ -45,5 +45,13 @@ describe Alimentos do
           expect(@tomate.ve).to eq(19.8) 
         end
     end 
+
+    describe "Prueba del alimento formateado: " do
+        it "Se muestra el alimento formateado " do
+          expect(@papas.to_s).to eq("Alimento:\sPapas\n------------------------------\nProteínas:\s2.0g\nGlúcidos:\s15.4g\nLípidos:\s0.1g") 
+        end
+    end 
+   
 end
+
 

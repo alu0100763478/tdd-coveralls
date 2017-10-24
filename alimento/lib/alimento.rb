@@ -2,7 +2,7 @@ require "alimento/version"
 
 class Alimentos
 
-    attr_reader :nombre,:proteinas,:glucidos
+    attr_reader :nombre,:proteinas,:glucidos,:lipidos
     
     def initialize(nombre,proteinas,glucidos,lipidos)
         

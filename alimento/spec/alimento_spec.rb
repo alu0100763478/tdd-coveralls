@@ -40,5 +40,10 @@ describe Alimentos do
         end
     end
 
+    describe "Prueba del método ve: " do
+        it "Se muestra el valor energético del alimento " do
+          expect(@tomate.ve).to eq(19.8) 
+        end
+    end 
 end
 

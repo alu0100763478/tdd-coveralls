@@ -1,6 +1,6 @@
-require 'lib/alimento.rb'
+require 'spec_helper'
 
-describe Alimentos do
+RSpec.describe Alimentos do
 
     before :all do
         @huevoFrito= Alimentos.new('Huevo frito','14.1g','0.0g','19.5g')

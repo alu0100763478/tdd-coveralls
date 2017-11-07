@@ -17,6 +17,7 @@ class Alimentos
     def to_s
     
         "Alimento: #{@nombre}\n------------------------------\nProteínas: #{@proteinas}\nGlúcidos: #{@glucidos}\nLípidos: #{@lipidos}"   
+
        
     end 
 

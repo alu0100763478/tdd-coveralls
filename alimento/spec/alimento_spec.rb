@@ -213,6 +213,17 @@ RSpec.describe Alimentos do
        	  expect(@huevoFrito).to be_a_kind_of(BasicObject)
     	end
     end
+
+    describe "Pruebas para el tipo de un objeto Alimentos" do      
+        it "un objeto alimentos responde al método nombre, proteinas,glucidos y lipidos" do
+       	  expect(@huevo).to respond_to(:nombre,:proteinas,:glucidos,:lipidos)
+    	end
+
+    	it "un objeto alimentos responde al método ve" do
+       	  expect(@huevo).to respond_to('ve')
+    	end
+     end  
+
 end
 
 

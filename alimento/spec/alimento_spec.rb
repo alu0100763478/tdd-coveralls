@@ -166,6 +166,31 @@ RSpec.describe Alimentos do
     	end
     end
 
+    describe "Pruebas para objeto agrupos" do     
+    	it "un objeto agrupos es una instancia de la clase AGrupos" do 
+      	  expect(@huevoFrito).to be_an_instance_of(AGrupos::AGrupos) 
+    	end
+    
+	it "un objeto agrupos es una instancia de la clase Object" do
+       	  expect(@huevoFrito).not_to be_an_instance_of(Object) 
+    	end
+
+    	it "un objeto agrupos es una instancia de la clase BasicObject" do
+       	  expect(@huevoFrito).not_to be_an_instance_of(BasicObject) 
+    	end
+    
+   	it "un agrupos es un AGrupos" do
+       	  expect(@huevoFrito).to be_a_kind_of(AGrupos::AGrupos)
+    	end
+
+    	it "un agrupos es un Object" do
+       	  expect(@huevoFrito).to be_a_kind_of(Object) 
+    	end
+
+    	it "un agrupos es un BasicObject" do
+       	  expect(@huevoFrito).to be_a_kind_of(BasicObject)
+    	end
+    end
 end
 
 

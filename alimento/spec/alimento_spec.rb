@@ -100,21 +100,45 @@ RSpec.describe Alimentos do
     describe "Prueba de nodos" do
 	it "Debe de existir un nodo con sus datos, siguiente y previo" do
 	  expect(@nodo1.value.nombre).to eq("Huevo frito")
+	  expect(@nodo2.value.nombre).to eq("Leche vaca")
+	  expect(@nodo10.value.nombre).to eq("Aceite de oliva")
+          expect(@nodo14.value.nombre).to eq("Lentejas")
+	  expect(@nodo11.value.nombre).to eq('Chocolate')
+          expect(@nodo11.next.value.nombre).to eq('Azúcar')
+          expect(@nodo12.value.nombre).to eq('Azúcar')
+          expect(@nodo12.next.value.nombre).to eq('Arroz')
+          expect(@nodo8.prev.value.nombre).to eq('Bacalao')
+          expect(@nodo9.prev.value.nombre).to eq('Atún')		
+          expect(@nodo3.value.nombre).to eq('Yogurt')
+          expect(@nodo3.next.value.nombre).to eq('Cerdo')
+          expect(@nodo3.prev.value.nombre).to eq('Leche vaca')
+
         end
     end
 
-    describe "Pruebas para la lista" do
-    	it "Se extrae el primer elemento de la Lista" do
+    describe "Pruebas para la lista: " do
+        it "Se inserta un nodo en la lista" do
+	  expect(@lista.cabeza.next.value.nombre).to eq('Leche vaca')
+          expect(@lista.cabeza.prev.value.nombre).to eq('Plátano')
+          expect(@lista.cabeza.value.nombre).to eq('Huevo frito')
+          expect(@lista.cola.next.value.nombre).to eq('Huevo frito')
+          expect(@lista.cola.prev.value.nombre).to eq('Manzana')
+          expect(@lista.cola.value.nombre).to eq('Plátano')
+	end
+
+    	it "Se extrae el primer elemento de la Lista: " do
       	  expect(@lista.cabeza.value.nombre).to eq('Huevo frito')
           @lista.pop_first
       	  expect(@lista.cabeza.value.nombre).to eq('Leche vaca')
       	end
-      	it "Se extrae el último elemento de la Lista" do
+      	it "Se extrae el último elemento de la Lista: " do
       	  expect(@lista.cola.value.nombre).to eq('Plátano')
           @lista.pop_last
           expect(@lista.cola.value.nombre).to eq('Manzana')
      	end      	
     end			     
+	
+
 end
 
 

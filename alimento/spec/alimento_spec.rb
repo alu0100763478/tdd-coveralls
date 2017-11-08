@@ -63,7 +63,9 @@ RSpec.describe Alimentos do
         @lista.push(@nodo17)
         @lista.push(@nodo18)
         @lista.push(@nodo19)
-	
+
+	@huevo= Alimentos.new('Huevo','14.1g','0.0g','19.5g') 	
+
     end
 
     describe "Pruebas almacenamiento de las variables: " do
@@ -138,6 +140,31 @@ RSpec.describe Alimentos do
      	end      	
     end			     
 	
+    describe "Pruebas para objeto alimentos" do     
+    	it "un objeto alimentos es una instancia de la clase Alimentos" do
+      	  expect(@huevo).to be_an_instance_of(Alimentos::Alimentos) 
+    	end
+    	
+	it "un objeto alimentos es una instancia de la clase Object" do
+       	  expect(@huevo).not_to be_an_instance_of(Object) 
+    	end
+
+    	it "un objeto alimentos es una instancia de la clase BasicObject" do
+       	  expect(@huevo).not_to be_an_instance_of(BasicObject) 
+    	end
+    
+    	it "un alientos es un Alimentos" do
+       	  expect(@huevo).to be_a_kind_of(Alimentos::Alimentos)
+    	end
+
+    	it "un aliemntos es un Object" do
+       	  expect(@huevo).to be_a_kind_of(Object) 
+    	end
+
+    	it "un aliemntos es un BasicObject" do
+       	  expect(@huevo).to be_a_kind_of(BasicObject)
+    	end
+    end
 
 end
 

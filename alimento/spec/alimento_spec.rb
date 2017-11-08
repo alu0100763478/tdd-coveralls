@@ -100,19 +100,8 @@ RSpec.describe Alimentos do
     describe "Prueba de nodos" do
 	it "Debe de existir un nodo con sus datos, siguiente y previo" do
 	  expect(@nodo1.value.nombre).to eq("Huevo frito")
-          @nodo1.next.length.should_not be 0
-          @nodo1.prev.length.should_not be 0
-	end	
-    end
-
-    describe "Prueba de lista" do
-	it "Debe existir una Lista con su cabeza y su cola" do
-	  @lista.cabeza.length.should_not be 0
-      	  @lista.cola.length.should_not be 0
-	end
-    end
-	
-   
+        end
+    end	     
 end
 
 

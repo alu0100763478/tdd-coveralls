@@ -22,6 +22,27 @@ RSpec.describe Alimentos do
         @cebolla= Alimentos.new('Cebolla','1.3g','5.8g','0.3g')
         @manzana= Alimentos.new('Manzana','0.3g','12.4g','0.4g')
         @platanos= Alimentos.new('Plátano','1.2g','21.4g','0.2g')   
+
+        @nodo1 = Node.new(@huevoFrito)
+        @nodo2 = Node.new(@leche)
+        @nodo3 = Node.new(@yogurt)
+        @nodo4 = Node.new(@cerdo)
+        @nodo5 = Node.new(@ternera)
+        @nodo6 = Node.new(@pollo)
+        @nodo7 = Node.new(@bacalo)
+        @nodo8 = Node.new(@atun)          
+        @nodo9 = Node.new(@salmon)
+        @nodo10 = Node.new(@aceite)
+        @nodo11 = Node.new(@chocolate)
+        @nodo12 = Node.new(@azucar)
+        @nodo13 = Node.new(@arroz)
+        @nodo14 = Node.new(@lentejas)
+        @nodo15 = Node.new(@papas)
+        @nodo16 = Node.new(@tomate)
+        @nodo17 = Node.new(@cebolla)
+        @nodo18 = Node.new(@manzana)          
+        @nodo19 = Node.new(@platanos)  
+
     end
 
     describe "Pruebas almacenamiento de las variables: " do
@@ -54,6 +75,14 @@ RSpec.describe Alimentos do
           expect(@papas.to_s).to eq("Alimento:\sPapas\n------------------------------\nProteínas:\s2.0g\nGlúcidos:\s15.4g\nLípidos:\s0.1g") 
         end
     end 
+
+    describe "Prueba de nodos" do
+	it "Debe de existir un nodo con sus datos, siguiente y previo" do
+	  expect(@nodo1.value).to eq("Huevo Frito")
+          @nodo1.prev.length.should_not be 0
+          @nodo1.prev.length.should_not be 0
+	end	
+    end
    
 end
 

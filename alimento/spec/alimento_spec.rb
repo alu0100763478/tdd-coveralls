@@ -224,6 +224,26 @@ RSpec.describe Alimentos do
     	end
      end  
 
+    describe "Pruebas para el tipo de un objeto AGrupos" do      
+        it "un objeto agrupos responde al método nombre, proteinas,glucidos y lipidos" do
+       	  expect(@huevoFrito).to respond_to(:nombre,:proteinas,:glucidos,:lipidos)
+    	end
+        
+	it "un objeto agrupos responde al método nombre, proteinas,glucidos y lipidos" do
+       	  expect(@huevoFrito).to respond_to(:ngrupo)
+    	end
+
+    	it "un objeto agrupos responde al método ve" do
+       	  expect(@huevoFrito).to respond_to('ve')
+    	end
+    end  
+
+    describe "Pruebas para la permanencia de una jerarquía" do      
+    	it "un agrupos es un Alimentos" do
+       	  expect(@huevoFrito).to be_a_kind_of(Alimentos::Alimentos)
+  	end
+    end
+	
 end
 
 

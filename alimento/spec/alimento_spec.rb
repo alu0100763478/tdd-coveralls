@@ -243,7 +243,12 @@ RSpec.describe Alimentos do
        	  expect(@huevoFrito).to be_a_kind_of(Alimentos::Alimentos)
   	end
     end
-	
+
+    describe "Pruebas para el formateo de los grupos de alimentos" do      
+        it "Grupos de alimentos formateados" do
+          expect(@papas.to_s).to eq("Grupo: Alimentos ricos en carbohidratos\nAlimento:\sPapas\n------------------------------\nProteínas:\s2.0g\nGlúcidos:\s15.4g\nLípidos:\s0.1g")
+       end
+    end  	
 end
 
 

@@ -25,4 +25,8 @@ class Lista
             @cola = other
         end
     end    
+
+    def pop_first()
+        @cabeza = @cabeza.next
+    end 
 end

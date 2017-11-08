@@ -1,5 +1,6 @@
 require "alimento/version"
 
+
 class Alimentos
 
     attr_reader :nombre,:proteinas,:glucidos,:lipidos

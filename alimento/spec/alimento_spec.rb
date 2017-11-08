@@ -43,6 +43,26 @@ RSpec.describe Alimentos do
         @nodo18 = Node.new(@manzana)          
         @nodo19 = Node.new(@platanos)  
 
+        @lista = Lista.new
+        @lista.push(@nodo1)
+        @lista.push(@nodo2)
+        @lista.push(@nodo3)
+        @lista.push(@nodo4)
+        @lista.push(@nodo5)
+        @lista.push(@nodo6)
+        @lista.push(@nodo7)
+        @lista.push(@nodo8)
+        @lista.push(@nodo9)
+        @lista.push(@nodo10)
+        @lista.push(@nodo11)
+        @lista.push(@nodo12)
+        @lista.push(@nodo13)
+        @lista.push(@nodo14)
+        @lista.push(@nodo15)
+        @lista.push(@nodo16)
+        @lista.push(@nodo17)
+        @lista.push(@nodo18)
+        @lista.push(@nodo19)
     end
 
     describe "Pruebas almacenamiento de las variables: " do
@@ -83,6 +103,14 @@ RSpec.describe Alimentos do
           @nodo1.prev.length.should_not be 0
 	end	
     end
+
+    describe "Prueba de lista" do
+	it "Debe existir una Lista con su cabeza y su cola" do
+	  @lista.cabeza.length.should_not be 0
+      	  @lista.cola.length.should_not be 0
+	end
+    end
+	
    
 end
 

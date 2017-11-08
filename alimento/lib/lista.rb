@@ -29,4 +29,8 @@ class Lista
     def pop_first()
         @cabeza = @cabeza.next
     end 
+
+    def pop_last()
+       @cola = @cola.prev 
+    end    
 end

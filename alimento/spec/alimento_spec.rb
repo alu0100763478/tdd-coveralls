@@ -101,7 +101,16 @@ RSpec.describe Alimentos do
 	it "Debe de existir un nodo con sus datos, siguiente y previo" do
 	  expect(@nodo1.value.nombre).to eq("Huevo frito")
         end
-    end	     
+    end
+
+    describe "Pruebas para la lista" do
+    	it "Se extrae el primer elemento de la Lista" do
+      	  expect(@lista.cabeza.value.nombre).to eq('Huevo frito')
+          @lista.pop_first
+      	  expect(@lista.cabeza.value.nombre).to eq('Leche vaca')
+      	end
+      	
+    end			     
 end
 
 

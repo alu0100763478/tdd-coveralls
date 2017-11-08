@@ -109,7 +109,11 @@ RSpec.describe Alimentos do
           @lista.pop_first
       	  expect(@lista.cabeza.value.nombre).to eq('Leche vaca')
       	end
-      	
+      	it "Se extrae el último elemento de la Lista" do
+      	  expect(@lista.cola.value.nombre).to eq('Plátano')
+          @lista.pop_last
+          expect(@lista.cola.value.nombre).to eq('Manzana')
+     	end      	
     end			     
 end
 

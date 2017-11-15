@@ -96,8 +96,19 @@ context "# Herencia, tipo de objeto y jerarquía de la clase Alimentos" do
         end
      end
 end    
+
+context "# Módulo Comparable" do
+    describe "Pruebas para comprobar que dos alimentos son iguales" do
+      it " Alimentos con el mismo nombre" do
+        @huevo = Alimentos.new('Huevo frito',14.1,0.0,19.5)
+        expect(@huevoFrito==@huevo).to eq(true)
+        expect(@atun==@salmon).to eq(false)
+        expect(@yogurt==@atun).to eq(false)
+      end
+    end  
+end
     
-end #context
+end #context Alimentos
 
 context "Listas y Grupos de Alimentos" do
 before :all do  

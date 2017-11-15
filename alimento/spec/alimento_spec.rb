@@ -284,8 +284,16 @@ context "# Correcto formateo de la clase AGrupos" do
        end
     end
 end
+
+context "# Módulo Enumerable" do
+  describe "Pruebas para el módulo Enumerable incluído en la clase Lista" do    
+      it " Núnero de nodos en la lista" do
+        expect(@lista.count).to eq(19) 
+      end 
+  end
+end
   
-end #context  
+end #context AGrupos
 
 
 

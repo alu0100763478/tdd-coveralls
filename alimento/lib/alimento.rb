@@ -3,12 +3,18 @@ require "alimento/version"
 
 class Alimentos
 
+    include Comparable
+
     attr_reader :nombre,:proteinas,:glucidos,:lipidos
     
     def initialize(nombre,proteinas,glucidos,lipidos)
         
         @nombre,@proteinas,@glucidos,@lipidos= nombre,proteinas,glucidos,lipidos
 
+    end
+
+    def <=>(other)
+        nombre.size <=> other.nombre.size
     end
 
     def ve

@@ -1,3 +1,15 @@
+# encoding: utf-8
+# Este módulo se ha creado para describir
+# distintas metodologías de programación
+# haciendo uso del Lenguaje de Programación
+# Ruby.  
+# Con ella se han desarrollado los ejemplos
+# de la asignatura Lenguajes y Paradigmas 
+# de Programación.
+#
+# Author::    Rossiel D. González
+# Copyright:: Cretive
+# License::   Distributes under the same terms as Ruby
 require "alimento/version"
 
 

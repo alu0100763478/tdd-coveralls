@@ -105,7 +105,17 @@ context "# Módulo Comparable" do
         expect(@atun==@salmon).to eq(false)
         expect(@yogurt==@atun).to eq(false)
       end
-    end  
+      it " Comparación de cantidad de micronutrientes entre alimentos" do
+        expect(@atun.glucidos==@salmon.glucidos).to eq(true)
+        expect(@huevoFrito.glucidos==@salmon.glucidos).to eq(true)
+        expect(@yogurt.glucidos>@atun.glucidos).to eq(true)
+        expect(@tomate.lipidos<@cebolla.lipidos).to eq(true)
+        expect(@platanos.proteinas<@papas.proteinas).to eq(true)
+        expect(@aceite.proteinas>@arroz.proteinas).to eq(false)
+        expect(@manzana.proteinas>@yogurt.proteinas).to eq(false)
+        expect(@ternera.lipidos>@aceite.lipidos).to eq(false)
+      end
+   end	  
 end
     
 end #context Alimentos

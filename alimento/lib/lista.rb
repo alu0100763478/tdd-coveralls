@@ -3,11 +3,22 @@ Node = Struct.new(:value, :next, :prev)
 
 class Lista
     
+    include Enumerable
+  
     attr_reader :cabeza,:cola
     
     def initialize()
         @cabeza,@cola = nil
     end
+
+    def each
+        aux = @cabeza
+        while aux != @cola do
+            yield aux.value
+            aux = aux.next
+        end
+        yield aux.value
+    end    
 
     def push(other)
         if @cabeza == nil

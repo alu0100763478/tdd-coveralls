@@ -15,6 +15,7 @@ class Alimentos
 
     def <=>(other)
         nombre.size <=> other.nombre.size
+        ve <=> other.ve
     end
 
     def ve

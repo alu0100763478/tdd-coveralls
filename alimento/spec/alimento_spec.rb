@@ -4,25 +4,26 @@ RSpec.describe Alimentos do
 
 context "# Alimentos" do
 before :all do
-        @huevoFrito= Alimentos.new('Huevo frito','14.1g','0.0g','19.5g')
-        @leche= Alimentos.new('Leche vaca','3.3g','4.8g','3.2g')
-        @yogurt= Alimentos.new('Yogurt','3.8g','4.9g','3.8g')
-        @cerdo= Alimentos.new('Cerdo','21.5g','0.0g','6.3g')
-        @ternera= Alimentos.new('Ternera','21.1g','0.0g','3.1g')
-        @pollo= Alimentos.new('Pollo','20.6g','0.0g','5.6g')
-        @bacalo= Alimentos.new('Bacalao','17.7g','0.0g','0.4g')
-        @atun= Alimentos.new('Atún','21.5g','0.0g','15.5g')
-        @salmon= Alimentos.new('Salmón','19.9g','0.0g','13.6g')
-        @aceite= Alimentos.new('Aceite de oliva','0.0g','0.2g','99.6g')
-        @chocolate= Alimentos.new('Chocolate','5.3g','47.0g','30.0g')
-        @azucar= Alimentos.new('Azúcar', '0.0g','99.8g','0.0g')
-        @arroz= Alimentos.new('Arroz','6.8g','77.7g','0.6g')
-        @lentejas= Alimentos.new('Lentejas','23.5g','52.0g','1.4g')
-        @papas= Alimentos.new('Papas','2.0g','15.4g','0.1g')
-        @tomate= Alimentos.new('Tomate', '1.0g','3.5g','0.2g')
-        @cebolla= Alimentos.new('Cebolla','1.3g','5.8g','0.3g')
-        @manzana= Alimentos.new('Manzana','0.3g','12.4g','0.4g')
-        @platanos= Alimentos.new('Plátano','1.2g','21.4g','0.2g') 
+
+        @huevoFrito= Alimentos.new('Huevo frito',14.1,0.0,19.5)
+        @leche= Alimentos.new('Leche vaca',3.3,4.8,3.2)
+        @yogurt= Alimentos.new('Yogurt',3.8,4.9,3.8)
+        @cerdo= Alimentos.new('Cerdo',21.5,0.0,6.3)
+        @ternera= Alimentos.new('Ternera',21.1,0.0,3.1)
+        @pollo= Alimentos.new('Pollo',20.6,0.0,5.6)
+        @bacalo= Alimentos.new('Bacalao',17.7,0.0,0.4)
+        @atun= Alimentos.new('Atún',21.5,0.0,15.5)
+        @salmon= Alimentos.new('Salmón',19.9,0.0,13.6)
+        @aceite= Alimentos.new('Aceite de oliva',0.0,0.2,99.6)
+        @chocolate= Alimentos.new('Chocolate',5.3,47.0,30.0)
+        @azucar= Alimentos.new('Azúcar', 0.0,99.8,0.0)
+        @arroz= Alimentos.new('Arroz',6.8,77.7,0.6)
+        @lentejas= Alimentos.new('Lentejas',23.5,52.0,1.4)
+        @papas= Alimentos.new('Papas',2.0,15.4,0.1)
+        @tomate= Alimentos.new('Tomate', 1.0,3.5,0.2)
+        @cebolla= Alimentos.new('Cebolla',1.3,5.8,0.3)
+        @manzana= Alimentos.new('Manzana',0.3,12.4,0.4)
+        @platanos= Alimentos.new('Plátano',1.2,21.4,0.2)  
 end 
 
 context "# Correcto almacenamiento y funcionamiento de los método de la clase Alimentos" do
@@ -32,13 +33,13 @@ context "# Correcto almacenamiento y funcionamiento de los método de la clase A
           expect(@leche.nombre).to eq('Leche vaca')
         end
         it "Se almacena correctamente la cantidad de proteínas" do
-          expect(@platanos.proteinas).to eq('1.2g') 
+          expect(@platanos.proteinas).to eq(1.2) 
         end  
         it "Se almacena correctamente la cantidad de glúcidos" do
-          expect(@manzana.glucidos).to eq('12.4g') 
+          expect(@manzana.glucidos).to eq(12.4) 
         end  
         it "Se almacena correctamente la cantidad de lípidos" do
-          expect(@cebolla.lipidos).to eq('0.3g') 
+          expect(@cebolla.lipidos).to eq(0.3) 
         end
     end
 
@@ -100,25 +101,25 @@ end #context
 
 context "Listas y Grupos de Alimentos" do
 before :all do  
-        @huevoFrito= AGrupos.new('Huevo frito','14.1g','0.0g','19.5g','Huevos, lácteos y helados')
-        @leche= AGrupos.new('Leche vaca','3.3g','4.8g','3.2g','Huevos, lácteos y helados')
-        @yogurt= AGrupos.new('Yogurt','3.8g','4.9g','3.8g','Huevos, lácteos y helados')
-        @cerdo= AGrupos.new('Cerdo','21.5g','0.0g','6.3g','Carnes y derivados')
-        @tenera= AGrupos.new('Ternera','21.1g','0.0g','3.1g','Carnes y derivados')
-        @pollo= AGrupos.new('Pollo','20.6g','0.0g','5.6g','Carnes y derivados')
-        @bacalo= AGrupos.new('Bacalao','17.7g','0.0g','0.4g','Pescados y mariscos')
-        @atun= AGrupos.new('Atún','21.5g','0.0g','15.5g','Pescados y mariscos')
-        @salmon= AGrupos.new('Salmón','19.9g','0.0g','13.6g','Pescados y mariscos')
-        @aceite= AGrupos.new('Aceite de oliva','0.0g','0.2g','99.6g','Alimentos grasos')
-        @chocolate= AGrupos.new('Chocolate','5.3g','47.0g','30.0g','Alimentos grasos')
-        @azucar= AGrupos.new('Azúcar', '0.0g','99.8g','0.0g','Alimentos ricos en carbohidratos')
-        @arroz= AGrupos.new('Arroz','6.8g','77.7g','0.6g','Alimentos ricos en carbohidratos')
-        @lentejas= AGrupos.new('Lentejas','23.5g','52.0g','1.4g','Alimentos ricos en carbohidratos')
-        @papas= AGrupos.new('Papas','2.0g','15.4g','0.1g','Alimentos ricos en carbohidratos')
-        @tomate= AGrupos.new('Tomate', '1.0g','3.5g','0.2g','Verduras y Hortalizas')
-        @cebolla= AGrupos.new('Cebolla','1.3g','5.8g','0.3g','Verduras y Hortalizas')
-        @manzana= AGrupos.new('Manzana','0.3g','12.4g','0.4g','Frutas')
-        @platanos= AGrupos.new('Plátano','1.2g','21.4g','0.2g','Frutas')
+        @huevoFrito= AGrupos.new('Huevo frito',14.1,0.0,19.5,'Huevos, lácteos y helados')
+        @leche= AGrupos.new('Leche vaca',3.3,4.8,3.2,'Huevos, lácteos y helados')
+        @yogurt= AGrupos.new('Yogurt',3.8,4.9,3.8,'Huevos, lácteos y helados')
+        @cerdo= AGrupos.new('Cerdo',21.5,0.0,6.3,'Carnes y derivados')
+        @ternera= AGrupos.new('Ternera',21.1,0.0,3.1,'Carnes y derivados')
+        @pollo= AGrupos.new('Pollo',20.6,0.0,5.6,'Carnes y derivados')
+        @bacalo= AGrupos.new('Bacalao',17.7,0.0,0.4,'Pescados y mariscos')
+        @atun= AGrupos.new('Atún',21.5,0.0,15.5,'Pescados y mariscos')
+        @salmon= AGrupos.new('Salmón',19.9,0.0,13.6,'Pescados y mariscos')
+        @aceite= AGrupos.new('Aceite de oliva',0.0,0.2,99.6,'Alimentos grasos')
+        @chocolate= AGrupos.new('Chocolate',5.3,47.0,30.0,'Alimentos grasos')
+        @azucar= AGrupos.new('Azúcar', 0.0,99.8,0.0,'Alimentos ricos en carbohidratos')
+        @arroz= AGrupos.new('Arroz',6.8,77.7,0.6,'Alimentos ricos en carbohidratos')
+        @lentejas= AGrupos.new('Lentejas',23.5,52.0,1.4,'Alimentos ricos en carbohidratos')
+        @papas= AGrupos.new('Papas',2.0,15.4,0.1,'Alimentos ricos en carbohidratos')
+        @tomate= AGrupos.new('Tomate',1.0,3.5,0.2,'Verduras y Hortalizas')
+        @cebolla= AGrupos.new('Cebolla',1.3,5.8,0.3,'Verduras y Hortalizas')
+        @manzana= AGrupos.new('Manzana',0.3,12.4,0.4,'Frutas')
+        @platanos= AGrupos.new('Plátano',1.2,21.4,0.2,'Frutas')
 
         @nodo1 = Node.new(@huevoFrito)
         @nodo2 = Node.new(@leche)

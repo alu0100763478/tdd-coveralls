@@ -12,15 +12,14 @@ class Alimentos
     end
 
     def ve
-        @proteinas[0..@proteinas.size-1].to_f*4+@glucidos[0..@glucidos.size-1].to_f*4+@lipidos[0..@lipidos.size-1].to_f*9
-    end 
-
+        @proteinas*4+@glucidos*4+@lipidos*9
+    end    
+    
     def to_s
     
-        "Alimento: #{@nombre}\n------------------------------\nProteínas: #{@proteinas}\nGlúcidos: #{@glucidos}\nLípidos: #{@lipidos}"   
-
+        "Alimento: #{@nombre}\n------------------------------\nProteínas:\s#{@proteinas}g\nGlúcidos:\s#{@glucidos}g\nLípidos:\s#{@lipidos}g"  
        
-    end 
+    end  
 
 end
 

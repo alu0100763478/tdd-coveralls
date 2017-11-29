@@ -329,7 +329,10 @@ end
     describe "Permite obtener un nuevo array con los elementos ordenados por su valor energético usando bucles for"
          it "for" do
           expect((ordenados_for(@array)).collect{|a| a.ve}).to eq([19.8, 31.1, 54.4, 61.2, 69.0, 70.5, 74.4, 92.2, 112.3, 132.8, 142.7, 202.0, 225.5, 231.9, 314.6, 343.4, 399.2, 479.2, 897.2])
-        end 
+        end
+         it "each" do
+          expect((ordenados_each(@array)).collect{|a| a.ve}).to eq([19.8, 31.1, 54.4, 61.2, 69.0, 70.5, 74.4, 92.2, 112.3, 132.8, 142.7, 202.0, 225.5, 231.9, 314.6, 343.4, 399.2, 479.2, 897.2])
+        end  
     end
 	
 end 

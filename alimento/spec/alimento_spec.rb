@@ -117,19 +117,7 @@ context "# Módulo Comparable" do
       end
    end	  
 end
-
-context "# Índice Glucémico" do
-  describe "Pruebas para comprobar el IG de los alimentos usando programación funcional" do
-      glucosa_1= [4.9,5.3,5.9,6.7,7.2,7.6,8.0,8.2,8.2,8.4,8.3,8.3,8.0,7.5,7.1,6.8,6.8,6.9,6.8,6.3,6.2,6.3,6.2,6.3,6.1]
-      yogurt_1= [6.1,6.6,6.3,6.3,6.1,6.9,6.8,6.5,6.4,6.9,6.8,6.5,6.3,6.2,6.7,6.2,5.9,5.8,5.8,5.8,5.8,5.8,5.9,6.2,6.4]
-      compota_1=[6.7,6.5,6.8,6.9,7.0,7.1,6.9,6.9,6.9,6.7,6.9,7.3,7.0,7.0,7.2,7.1,6.8,7.2,7.3,7.0,6.8,6.7,6.8,6.7,6.9]
-      chocolate_1=[6.1,6.6,6.3,6.3,6.1,6.9,6.8,6.5,6.4,6.9,6.8,6.5,6.3,6.2,6.7,6.2,5.9,5.8,5.8,5.8,5.8,5.8,5.9,6.2,6.4]
-      ig_alimento = [glucosa_1,yogurt_1]
-      it "Comprobación de los IG de los alimentos" do
-      expect(@yogurt.aibc([glucosa_1,yogurt_1]).each{|i| i}.reduce('/')*5).to eq(41.967213114754045)
-      end         
-  end
-end    
+    
 end #context Alimentos
 
 context "Listas y Grupos de Alimentos" do
@@ -310,10 +298,21 @@ context "# Módulo Enumerable" do
       end  
   end
 end
+
+context "# Programación funcional y Benchmarks" do
+
+    @array = [@huevoFrito,@leche,@yogurt,@cerdo,@ternera,@pollo,@bacalo,@atun,@salmon,@aceite,@chocolate,@azucar,@arroz,@lentejas,
+                @papas,@tomate,@cebolla,@manzana,@platanos]
   
+    describe "Permite obtener un nuevo array con los elementos ordenados por su valor energético usando bucles for"
+         it "for" do
+          expect((ordenados_for(@array)).collect{|a| a.ve}).to eq([19.8, 31.1, 54.4, 61.2, 69.0, 70.5, 74.4, 92.2, 112.3, 132.8, 142.7, 202.0, 225.5, 231.9, 314.6, 343.4, 399.2, 479.2, 897.2])
+        end 
+    end
+	
+end 
+
 end #context AGrupos
 
 
 
-
-end

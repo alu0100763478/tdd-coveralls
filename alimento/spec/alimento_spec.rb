@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'benchmark'
 
 RSpec.describe Alimentos do
 
@@ -333,8 +334,14 @@ end
          it "each" do
           expect((ordenados_each(@array)).collect{|a| a.ve}).to eq([19.8, 31.1, 54.4, 61.2, 69.0, 70.5, 74.4, 92.2, 112.3, 132.8, 142.7, 202.0, 225.5, 231.9, 314.6, 343.4, 399.2, 479.2, 897.2])
         end  
-    end
-	
+        it "Benchmark" do
+          Benchmark.bm(10) do |b|
+          b.report("Ordenados usando for") { ordenados_for(@array) }
+          b.report("Ordenados usando each") { ordenados_each(@array) }
+          b.report("Ordenados usando sort") { @array.sort }
+          end
+	end
+   end 		
 end 
 
 end #context AGrupos

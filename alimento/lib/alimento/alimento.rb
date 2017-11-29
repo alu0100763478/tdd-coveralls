@@ -31,7 +31,7 @@ class Alimentos
     end
 
     def ve
-        @proteinas*4+@glucidos*4+@lipidos*9
+        (@proteinas*4+@glucidos*4+@lipidos*9).round(3)
     end    
 
     

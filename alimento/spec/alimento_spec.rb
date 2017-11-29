@@ -294,16 +294,38 @@ context "# Módulo Enumerable" do
         expect(@lista.min.ve).to eq(19.8)
       end
       it " Máximos del valor energético" do
-        expect(@lista.max.ve).to eq(897.1999999999999)
+        expect(@lista.max.ve).to eq(897.2)
       end  
   end
 end
 
 context "# Programación funcional y Benchmarks" do
 
+before :all do
+        @huevoFrito= AGrupos.new('Huevo frito',14.1,0.0,19.5,'Huevos, lácteos y helados')
+        @leche= AGrupos.new('Leche vaca',3.3,4.8,3.2,'Huevos, lácteos y helados')
+        @yogurt= AGrupos.new('Yogurt',3.8,4.9,3.8,'Huevos, lácteos y helados')
+        @cerdo= AGrupos.new('Cerdo',21.5,0.0,6.3,'Carnes y derivados')
+        @ternera= AGrupos.new('Ternera',21.1,0.0,3.1,'Carnes y derivados')
+        @pollo= AGrupos.new('Pollo',20.6,0.0,5.6,'Carnes y derivados')
+        @bacalo= AGrupos.new('Bacalao',17.7,0.0,0.4,'Pescados y mariscos')
+        @atun= AGrupos.new('Atún',21.5,0.0,15.5,'Pescados y mariscos')
+        @salmon= AGrupos.new('Salmón',19.9,0.0,13.6,'Pescados y mariscos')
+        @aceite= AGrupos.new('Aceite de oliva',0.0,0.2,99.6,'Alimentos grasos')
+        @chocolate= AGrupos.new('Chocolate',5.3,47.0,30.0,'Alimentos grasos')
+        @azucar= AGrupos.new('Azúcar', 0.0,99.8,0.0,'Alimentos ricos en carbohidratos')
+        @arroz= AGrupos.new('Arroz',6.8,77.7,0.6,'Alimentos ricos en carbohidratos')
+        @lentejas= AGrupos.new('Lentejas',23.5,52.0,1.4,'Alimentos ricos en carbohidratos')
+        @papas= AGrupos.new('Papas',2.0,15.4,0.1,'Alimentos ricos en carbohidratos')
+        @tomate= AGrupos.new('Tomate',1.0,3.5,0.2,'Verduras y Hortalizas')
+        @cebolla= AGrupos.new('Cebolla',1.3,5.8,0.3,'Verduras y Hortalizas')
+        @manzana= AGrupos.new('Manzana',0.3,12.4,0.4,'Frutas')
+        @platanos= AGrupos.new('Plátano',1.2,21.4,0.2,'Frutas') 
+
     @array = [@huevoFrito,@leche,@yogurt,@cerdo,@ternera,@pollo,@bacalo,@atun,@salmon,@aceite,@chocolate,@azucar,@arroz,@lentejas,
                 @papas,@tomate,@cebolla,@manzana,@platanos]
-  
+end  
+
     describe "Permite obtener un nuevo array con los elementos ordenados por su valor energético usando bucles for"
          it "for" do
           expect((ordenados_for(@array)).collect{|a| a.ve}).to eq([19.8, 31.1, 54.4, 61.2, 69.0, 70.5, 74.4, 92.2, 112.3, 132.8, 142.7, 202.0, 225.5, 231.9, 314.6, 343.4, 399.2, 479.2, 897.2])

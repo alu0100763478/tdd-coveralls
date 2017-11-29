@@ -1,3 +1,4 @@
+require "coveralls"
 require "bundler/setup"
 require "alimento"
 require "alimento/lista"
@@ -13,3 +14,5 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+Coveralls.wear!
